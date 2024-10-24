@@ -92,7 +92,8 @@ async function run() {
     const menuCollection = client.db("equityDb").collection("menu");
    
 
-    // jwt
+    // jwt related API Start here //
+    
     app.post('/jwt',logger,verifyToken, async(req,res)=>{
       
       const user = req.body;
@@ -120,11 +121,7 @@ async function run() {
       res.clearCookie('token', { maxAge: 0 } ).send({success:true }) 
   })
 
-//   app.post('/logout', async (req, res) => {
-//     const user = req.body;
-//     console.log('logging out', user);
-//     res.clearCookie('token', { maxAge: 0 }).send({ success: true })
-// })
+  //  jwt related API Ends Here  //
   
 
     // data related api
