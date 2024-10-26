@@ -169,7 +169,9 @@ async function run() {
     })
 
 
-// payment intent
+// payment intent 
+
+// Payment method = ' STRIPE'
 app.post('/create-payment-intent', async (req, res) => {
   const { price } = req.body;
   const amount = parseInt(price * 100);
